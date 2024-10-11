@@ -1,4 +1,66 @@
-main,
+:root {
+  ---cornerstone-blue: #121d51;
+  ---cyan: #00ffff;
+  ---yellow: #ffff00;
+  ---black: #000;
+  ---green: #008000;
+  ---gray: #808080;
+  ---red: #a52a2a;
+  ---pink: #ffc0cb;
+  ---white: #fff;
+  ---blue: #0000ff;
+}
+img {
+  width: 100%;
+}
+.container {
+  min-height: 100vh;
+}
+header {
+  background: var(---cornerstone-blue);
+}
+header .logo {
+  text-align: center;
+}
+header .logo img {
+  width: auto;
+}
+main {
+  display: flex;
+}
+main .sidebar {
+  color: var(---blue);
+  background: var(---yellow);
+}
+main .content {
+  background: var(---cyan);
+}
+.content #about ~ p {
+  color: var(---white);
+}
+.content #about + p {
+  background: var(---black);
+}
+.content #services + p {
+  background: var(---green);
+}
+.content #services + p + ul li:nth-child(2n) {
+  color: var(---red);
+}
+.content #contact ~ ul li a {
+  color: var(---red);
+}
 footer {
   display: flex;
+}
+footer div:nth-child(1) {
+  color: var(---white);
+  background: var(---pink);
+}
+footer div:nth-child(2) {
+  color: var(---white);
+  background: var(---red);
+}
+footer div:nth-child(3) {
+  background: var(---gray);
 }
